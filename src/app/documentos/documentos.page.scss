@@ -1,0 +1,54 @@
+ion-content{  --background: rgb(57, 169, 0); }
+
+ion-header {
+    ion-item {
+
+        h3 {
+            margin-left: 700px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+  
+        #button1, #button2 {
+            background-color: rgb(57, 169, 0);
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+  
+
+ion-card{
+    ion-item{
+        button{
+            background-color: rgb(57, 169, 0);
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+// estilos del footer
+.centered-image {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: transparent;
+}
+
+#logo {
+    margin: 5px;
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    background-color: rgb(251,251,226); 
+
+    img {
+    max-width: 100%; 
+    max-height: 100%; 
+    }
+} 

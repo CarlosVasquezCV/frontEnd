@@ -1,0 +1,102 @@
+//encabezado
+.pop{
+  --background: rgb(57, 169, 0);
+  
+}
+h1{
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  margin-top: -400px;
+
+}
+.logo{
+  height: 70px;
+  padding-left: 660px;
+}
+
+h3{
+  margin-left: 20px;
+  font-size: 22px;
+  color:#FFFFFF
+}
+.two{
+  position: absolute;
+border: 2px solid  rgb(57, 169, 0);
+ margin-top: 100px;
+ margin-left: 140px;
+ text-align: center;
+ font-size: 20px;
+ border-radius: 30px;
+ width: 240px;
+ height: 280px;
+}
+.uno{
+  position: absolute;
+  border: 2px solid  rgb(57, 169, 0);
+   margin-top: 100px;
+   margin-left: 280px;
+   text-align: center;
+   font-size: 20px;
+   border-radius: 30px;
+   width: 240px;
+   height: 280px;
+}
+.tre{
+  position: absolute;
+  border: 2px solid  rgb(57, 169, 0);
+  margin-top: 100px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 30px;
+  width: 240px;
+  height: 280px;
+}
+.kilo{
+  --background: #FFFFFF;
+}
+
+.botonsesion{
+  --color:#ffffff;
+  font-size: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+}
+.botonsesion:hover{
+  background-color: white;
+  border: 3px 0 rgb(57, 169, 0);
+  --color: rgb(57, 169, 0);
+}
+
+ion-title{
+  margin-left: 650px;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+  border-bottom: 2px solid black;
+  display: inline-block;
+}
+ion-icon{
+  margin-left: 35px;
+  width: 120px;
+  height: 160px;
+}
+.uno:hover, .two:hover, .tre:hover{
+  background-color: rgb(57, 169, 0);
+  color: white;
+  cursor: pointer;
+  ion-icon{
+    color: white;
+  }
+}
+ion-card-content{
+  font-size: 30px;
+}
+.este{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1px;
+}

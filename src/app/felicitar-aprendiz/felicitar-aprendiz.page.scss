@@ -1,0 +1,98 @@
+//encabezado
+.pop{
+  --background: rgb(57, 169, 0);
+  
+}
+h1{
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  margin-top: -400px;
+
+}
+h3{
+  margin-left: 20px;
+  font-size: 22px;
+ color:#FFFFFF
+}
+.logo{
+  height: 70px;
+  padding-left: 690px;
+  
+}
+.botonsesion{
+  --color:#ffffff;
+  height: 40px;
+  border-radius: 10px;
+}
+.botonsesion:hover{
+  --color:#ffffff;
+  background-color: red;
+}
+//cuerpo
+.centered-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+}
+
+#botonesRutas {
+  text-align: right;
+  padding-right: 10px;
+  display: flex;
+}
+
+#formulario{
+  padding-top: 50px;
+  margin-top: 60px;
+}
+
+#formularioFelicitar {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(57, 169, 0);
+}
+
+h2 {
+  margin-left: 625px;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+  border-bottom: 2px solid black;
+  display: inline-block;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cuadro{
+  border-radius: 5px;
+}
+
+.este{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1px;
+}
+

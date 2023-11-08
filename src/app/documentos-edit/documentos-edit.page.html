@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-title>iumaco</ion-title>
+      <ion-button (click)="volver()" slot="end"> Volver </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+
+    <ion-item>
+      <ion-label position="floating">Descargos escritos:</ion-label>
+      <ion-textarea [(ngModel)]="descargosE"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descargos verbales:</ion-label>
+      <ion-textarea [(ngModel)]="descargosV"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Decisiones del comité:</ion-label>
+      <ion-select [(ngModel)]="selectedOption" (ionChange)="onOptionSelected($event)">
+        <ion-select-option value = "Acta de condicionamiento">Condicionamiento</ion-select-option>
+        <ion-select-option value = "Cancelar Matricula">Cancelar Matricula</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="selectedOption !== ''">
+
+      <ion-label>Año:</ion-label>
+      <ion-select [(ngModel)]="sAno">
+        <ion-select-option value="{{anio}}">año actual</ion-select-option>
+        <ion-select-option value="{{anioSigiente}}">año siguiente</ion-select-option>
+      </ion-select>
+
+      <ion-label>Mes:</ion-label>
+      <ion-select [(ngModel)]="sMes" (ionChange)="actualizarDias(sMes)">
+        <ion-select-option value="Enero">Enero</ion-select-option>
+        <ion-select-option value="Febrero">Febrero</ion-select-option>
+        <ion-select-option value="Marzo">Marzo</ion-select-option>
+        <ion-select-option value="Abril">Abril</ion-select-option>
+        <ion-select-option value="Mayo">Mayo</ion-select-option>
+        <ion-select-option value="Junio">Junio</ion-select-option>
+        <ion-select-option value="Julio">Julio</ion-select-option>
+        <ion-select-option value="Agosto">Agosto</ion-select-option>
+        <ion-select-option value="Septiembre">Septiembre</ion-select-option>
+        <ion-select-option value="Octubre">Octubre</ion-select-option>
+        <ion-select-option value="Noviembre">Noviembre</ion-select-option>
+        <ion-select-option value="Diciembre">Diciembre</ion-select-option>
+      </ion-select>
+      
+      <ion-label>Día:</ion-label>
+      <ion-select [(ngModel)]="sDia">
+        <ion-select-option *ngFor="let dia of dias" [value]="dia">{{ dia }}</ion-select-option>
+      </ion-select>
+      
+    </ion-item>
+    <ion-button (click)="enviarDatos()" *ngIf="selectedOption !== ''">actualizar</ion-button>
+    <ion-button (click)="enviarCorreo()"> enviar Correo</ion-button>
+  </ion-card>
+  
+  <pre>
+  </pre>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center ion-align-items-center">
+    <ion-col>
+      
+      <div id="formulario">
+
+        <div id="circulo"><img src="../../assets/icon/logoBlanco.jpeg" alt="img logo"></div>          
+
+        <br><br><br><br>
+        
+        <form (ngSubmit)="login()">
+          <ion-item>
+            <ion-label position="floating">Usuario:</ion-label>
+            <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+          </ion-item>
+                          
+          <ion-item>
+            <ion-label position="floating">Contraseña:</ion-label>
+            <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+          </ion-item>
+          
+          <button expand="full" type="submit">Iniciar sesión</button>
+          
+        </form>
+        
+      </div>
+      
+    </ion-col>
+    <ion-col id="col2">
+
+      <div>
+        <img src="../../assets/Captura de pantalla 2023-10-20 200054.png" alt="">
+        <p id="p2">{{fechaFormateada}}</p>
+      </div>
+
+    </ion-col>
+  </ion-row>
+
+</ion-content>

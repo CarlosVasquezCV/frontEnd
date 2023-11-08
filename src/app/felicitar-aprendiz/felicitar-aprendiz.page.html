@@ -1,0 +1,53 @@
+<ion-header class="pop" [translucent]="false">
+  <ion-toolbar class="pop" >
+    <ion-item id="header" class="pop">
+      <h3> IUMACO </h3> 
+      <div id="logo"><img src="../../assets/sena.png" class="logo"></div>
+      <div class="custom-button" slot="end">
+        <ion-button fill="clear"  class="botonsesion"  (click)="volver()">Volver</ion-button>
+        <ion-button fill="clear" class="botonsesion"   (click)="confirmarSalida()">Cerrar sesión</ion-button>
+      </div>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="centered-container">
+  <h2>Formulario de Felicitación</h2>
+  <div id="formulario">
+    <div id="formularioFelicitar">
+      
+      <form action="enviar.php" method="POST">
+
+        <ion-item class="cuadro">
+          <ion-label for="fichas">Fichas:</ion-label>
+          <ion-select id="fichas" [(ngModel)]="fichaSeleccionada" name="fichaSeleccionada" (ionChange)="filtrarDestinatarios()">
+            <ion-select-option *ngFor="let ficha of fichasUnicas" [value]="ficha">{{ ficha }}</ion-select-option>
+          </ion-select>
+        </ion-item><br>
+        
+        <ion-item class="cuadro">
+          <ion-label for="destinatario">Aprendices como destinatario:</ion-label>
+          <ion-select id="destinatario" [(ngModel)]="destinatario" name="destinatario" multiple="false" (ionChange)="informacionAprendiz()">
+            <ion-select-option *ngFor="let destinatario of destinatarios" [value]="destinatario.email">{{ destinatario }}</ion-select-option>
+          </ion-select>
+        </ion-item><br>
+
+        <ion-item class="cuadro">
+          <ion-label position="floating">Nota:</ion-label>
+          <ion-textarea [(ngModel)]="nota" id="nota" name="nota" rows="4" cols="30"></ion-textarea>
+        </ion-item><br><br>        
+
+        <input type="submit" value="Enviar" (click)="enviarCorreo()">
+      </form>
+    </div>
+  </div>
+
+  <pre>
+    newEmail: {{this.newEmail}}
+  </pre>
+  <img class="este" src="../../assets/icon/Captura-fondo-sena.png">
+
+
+
+  <!------------------------------------------->

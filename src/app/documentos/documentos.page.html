@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  
+    <ion-item id="header" lines="none">
+      
+      <button (click)="volver()" id="button1" slot="start"> Volver </button>
+
+      <h3> Iumaco </h3> 
+
+      <button (click)="salirPagina()" id="button2" slot="end"> Cerrar sesión </button>
+      
+    </ion-item>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card *ngFor="let dat of listaDB">
+    <ion-card-header>
+      <ion-card-subtitle>idCitación: {{dat.idCita}}</ion-card-subtitle>
+      <ion-card-subtitle>{{dat.fechaCitacion}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      aprendiz: {{dat.aprendiz}} |
+      tipoDocumento: {{dat.tipoDocumento}} |
+      numeroTI: {{dat.numeroTI}} |
+      ficha: {{dat.ficha}} |
+      jornada: {{dat.jornada}} |
+      programa: {{dat.programa}} |
+      correoAprendiz: {{dat.correoAprendiz}} |
+      instructor: {{dat.instructor}} |
+      correoInstructor: {{dat.correoInstructor}}  |
+      nota: {{dat.nota}} |
+      decisionComite: {{dat.decisionComite}}
+    </ion-card-content>
+
+    <ion-item>
+      <button slot="end" (click)="updateDecision(dat)">Poner decision del comite</button>
+    </ion-item>
+  </ion-card>
+</ion-content>
